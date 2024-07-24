@@ -1,4 +1,5 @@
-FROM python
+FROM openjdk
 WORKDIR /app
 COPY . /app
-CMD ["javac","test.java"]
+RUN javac test.java
+CMD ["java","test"]
